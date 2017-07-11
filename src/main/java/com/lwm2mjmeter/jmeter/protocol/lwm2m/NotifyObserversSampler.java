@@ -6,13 +6,13 @@ import org.apache.jmeter.samplers.SampleResult;
 import org.apache.jmeter.testbeans.TestBean;
 import org.apache.jmeter.threads.JMeterContext;
 import org.apache.jmeter.threads.JMeterVariables;
-import org.apache.jorphan.logging.LoggingManager;
-import org.apache.log.Logger;
 import com.simplelwm2m.simplelwm2m.*;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class NotifyObserversSampler extends LwM2mAbstractSampler implements TestBean {
 
-    private static final Logger log = LoggingManager.getLoggerForClass();
+    private static final Logger log = LoggerFactory.getLogger(NotifyObserversSampler.class);
     protected Random rng = new Random();
 
     private String objectId;

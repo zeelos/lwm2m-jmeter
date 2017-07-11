@@ -14,12 +14,12 @@ import org.apache.jmeter.threads.JMeterContextService;
 import org.apache.jmeter.threads.JMeterVariables;
 import com.simplelwm2m.simplelwm2m.MockLwM2mClient;
 import com.simplelwm2m.simplelwm2m.SimpleResource;
-import org.apache.jorphan.logging.LoggingManager;
-import org.apache.log.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public abstract class LwM2mManager extends ConfigTestElement implements LoopIterationListener, TestBean, TestStateListener, ThreadListener {
 
-    private static final Logger log = LoggingManager.getLoggerForClass();
+    private static final Logger log = LoggerFactory.getLogger(LwM2mManager.class);
 
     /**
     * LWM2M endpoint
