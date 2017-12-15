@@ -1,5 +1,7 @@
 # lwm2m-jmeter
 
+> (forked from [vears91/lwm2m-jmeter](https://github.com/vears91/lwm2m-jmeter) original repo with small enchancements to allow compatibility with the latest jmeter library and enable customizable parameters during test invocation). Kudos to [Victor Araujo](https://github.com/vears91) for the initial plugin writing.
+
 This project is a plugin for [Apache JMeter](http://jmeter.apache.org/) that implements samplers and config elements for the [LightweightM2m protocol](http://openmobilealliance.org/iot/lightweight-m2m-lwm2m/). It allows JMeter threads to act as virtual LWM2M clients that can register, derregister and push observations to a LWM2M server.
 
 This plugin can be used with JMeter to test non-functional and functional aspects of LWM2M servers. It uses lightweight mock LWM2M [clients](https://github.com/vears91/simplelwm2m) based on [Californium](https://github.com/eclipse/californium) to interact with the server. It has been tested with up to 2000 simultaneous clients generating load in a single commodity machine (a laptop with 8 GB RAM and an Intel Core i7-4710HQ CPU @ 2.50GHz processor), and more than 10,000 using JMeter's distributed mode in Amazon Web Services.
